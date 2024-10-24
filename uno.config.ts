@@ -1,10 +1,11 @@
-// uno.config.ts
+import process from 'node:process'
+
 import {
   type Preset,
   defineConfig,
-  presetUno,
   presetAttributify,
   presetIcons,
+  presetUno,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -20,7 +21,8 @@ const presets: Preset[] = []
 if (isMp) {
   // 使用小程序预设
   presets.push(presetApplet(), presetRemRpx())
-} else {
+}
+else {
   presets.push(
     // 非小程序用官方预设
     presetUno(),
@@ -36,7 +38,7 @@ export default defineConfig({
       scale: 1.2,
       warn: true,
       extraProperties: {
-        display: 'inline-block',
+        'display': 'inline-block',
         'vertical-align': 'middle',
       },
     }),

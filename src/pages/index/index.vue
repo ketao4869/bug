@@ -2,28 +2,6 @@
 import { ref } from 'vue'
 
 const title = ref('Hello')
-
-
-
-// function camelCase(word: string): string {
-//   return word.replace(/-(\w)/g, (_, c) => {
-//     console.log(c);
-    
-//     return c.toUpperCase()
-//   })
-// }
-
-// camelCase('message-box')
-
-function camelCase(word: string): string {
-  return word.replace(/-(\w)/g, (match, c) => {
-    console.log(c)
-    return c.toUpperCase()
-  });
-}
-
-console.log(camelCase('message-box')); // 输出 "messageBox"
-
 </script>
 
 <template>
